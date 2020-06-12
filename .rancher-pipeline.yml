@@ -16,7 +16,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: zerchin/go-hello:${CICD_EXECUTION_SEQUENCE}
+      tag: zerchin/test-pipeline:v1.0
       registry: 127.0.0.1:34826
 - name: deploy
   steps:
