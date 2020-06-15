@@ -16,7 +16,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: zerchin/test-pipeline:v1.0
+      tag: zerchin/test-pipeline:test
       pushRemote: true
       registry: index.docker.io
     env:
