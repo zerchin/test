@@ -10,14 +10,15 @@ stages:
         func main() {
           fmt.Println("hello world")
         }
-        go build hello.go
+        CGO_ENABLED=0 go build hello.go
 - name: publish
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: zerchin/test-pipeline:v1.0
-      registry: 127.0.0.1:34826
+      pushRemote: true
+      registry: index.docker.io
 - name: deploy
   steps:
   - applyYamlConfig:
