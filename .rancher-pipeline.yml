@@ -11,6 +11,7 @@ stages:
           fmt.Println("hello world")
         }
         CGO_ENABLED=0 go build hello.go
+- name: test
 - name: publish
   steps:
   - publishImageConfig:
