@@ -16,8 +16,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: zerchin/test-pipeline:test
-      pushRemote: true
+      tag: zerchin/test-pipeline:${CICD_GIT_COMMIT}
       registry: index.docker.io
     env:
       PLUGIN_DEBUG: "true"
